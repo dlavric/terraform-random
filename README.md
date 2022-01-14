@@ -71,7 +71,7 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
-  + server = "Daniela"
+  + server = (known after apply)
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -80,13 +80,13 @@ Do you want to perform these actions?
   Enter a value: yes
 
 random_id.server: Creating...
-random_id.server: Creation complete after 0s [id=XMXfKbcgR3A]
+random_id.server: Creation complete after 0s [id=iA70kkbIBHg]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-server = "Daniela"
+server = "iA70kkbIBHg"
 ```
 
 - To confirm the resources that have been created
@@ -107,7 +107,7 @@ terraform destroy
 
 This is how it is supposed to look after destroying the changes:
 ```shell
-random_id.server: Refreshing state... [id=XMXfKbcgR3A]
+random_id.server: Refreshing state... [id=iA70kkbIBHg]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   - destroy
@@ -116,19 +116,19 @@ Terraform will perform the following actions:
 
   # random_id.server will be destroyed
   - resource "random_id" "server" {
-      - b64_std     = "DanielaXMXfKbcgR3A=" -> null
-      - b64_url     = "DanielaXMXfKbcgR3A" -> null
+      - b64_std     = "DanielaiA70kkbIBHg=" -> null
+      - b64_url     = "DanielaiA70kkbIBHg" -> null
       - byte_length = 8 -> null
-      - dec         = "Daniela6684994592160368496" -> null
-      - hex         = "Daniela5cc5df29b7204770" -> null
-      - id          = "XMXfKbcgR3A" -> null
+      - dec         = "Daniela9804042347922064504" -> null
+      - hex         = "Daniela880ef49246c80478" -> null
+      - id          = "iA70kkbIBHg" -> null
       - prefix      = "Daniela" -> null
     }
 
 Plan: 0 to add, 0 to change, 1 to destroy.
 
 Changes to Outputs:
-  - server = "Daniela" -> null
+  - server = "iA70kkbIBHg" -> null
 
 Do you really want to destroy all resources?
   Terraform will destroy all your managed infrastructure, as shown above.
@@ -136,7 +136,7 @@ Do you really want to destroy all resources?
 
   Enter a value: yes
 
-random_id.server: Destroying... [id=XMXfKbcgR3A]
+random_id.server: Destroying... [id=iA70kkbIBHg]
 random_id.server: Destruction complete after 0s
 
 Destroy complete! Resources: 1 destroyed.
