@@ -9,5 +9,5 @@ resource "random_id" "server" {
 }
 
 output "server" {
-  value = random_id.server.prefix
+  value = random_id.server.id
 }
